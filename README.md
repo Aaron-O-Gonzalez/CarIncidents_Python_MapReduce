@@ -21,23 +21,21 @@ The first mapper will display only the data needed for the subsequent calculatio
 
 
 
-
-
+![Mapper1](https://github.com/Aaron-O-Gonzalez/CarIncidents_Python_MapReduce/blob/master/terminal_screenshots/Mapper1.png)
 
 
 ## Reducer 1
 
 As shown above, there are entries which do not contain the make and the year model. Further, we are only interested in incident_types of initial sale, i.e., 'I'. Thus, this reducer will populate the group-level information based on **vin_number** and filter out records that are not of **incident_type** 'I'. The expected output is as follows:
 
-
+![Reducer1](https://github.com/Aaron-O-Gonzalez/CarIncidents_Python_MapReduce/blob/master/terminal_screenshots/Reducer1.png)
 
 ## Mapper 2 
 
 Now that only the pertinent records are retained, the next mapper will assign a value of '1' for each entry.  The expected output is as follows:
 
 
-
-
+![Mapper2](https://github.com/Aaron-O-Gonzalez/CarIncidents_Python_MapReduce/blob/master/terminal_screenshots/Mapper2.png)
 
 
 
@@ -45,5 +43,6 @@ Now that only the pertinent records are retained, the next mapper will assign a 
 
 For the final reducer, the make and the year are used as a composite key, which are then tied to the value as the count. The output yields the number of incidents reported for a car with a specific make and year, as shown below:
 
+![Reducer2](https://github.com/Aaron-O-Gonzalez/CarIncidents_Python_MapReduce/blob/master/terminal_screenshots/Reducer2.png)
 
 
